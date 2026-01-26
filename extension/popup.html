@@ -2,19 +2,42 @@
 <html>
 <head>
     <style>
-        body { width: 200px; font-family: sans-serif; padding: 10px; text-align: center; }
-        button { 
-            width: 100%; padding: 10px; cursor: pointer; 
-            background-color: #4CAF50; color: white; border: none; border-radius: 4px;
-            font-weight: bold;
+        body { width: 220px; font-family: 'Segoe UI', sans-serif; padding: 15px; text-align: center; background: #f0f0f0; }
+        h3 { margin: 0 0 15px 0; color: #333; }
+        
+        /* The Big Sync Button */
+        button#syncBtn { 
+            width: 100%; padding: 12px; cursor: pointer; 
+            background-color: #2196F3; color: white; border: none; border-radius: 6px;
+            font-weight: bold; font-size: 14px; margin-bottom: 15px;
+            transition: background 0.3s;
         }
-        button:hover { background-color: #45a049; }
-        #statusMsg { margin-top: 10px; font-size: 12px; color: #666; height: 15px; }
+        button#syncBtn:hover { background-color: #1976D2; }
+
+        /* The Loop Toggle Container */
+        .toggle-container {
+            display: flex; align-items: center; justify-content: space-between;
+            background: #fff; padding: 10px; border-radius: 6px; border: 1px solid #ddd;
+        }
+        .label { font-size: 13px; font-weight: bold; color: #555; }
+        
+        /* Status Message */
+        #statusMsg { margin-top: 15px; font-size: 11px; color: #666; min-height: 15px; }
+
+        /* Simple Checkbox for Toggle */
+        input[type=checkbox] { transform: scale(1.5); cursor: pointer; }
     </style>
 </head>
 <body>
-    <h3>Bridge V2</h3>
-    <button id="syncBtn">SYNC LAST MSG</button>
+    <h3>Bridge V3.1</h3>
+    
+    <button id="syncBtn">SYNC ONCE (Manual)</button>
+
+    <div class="toggle-container">
+        <span class="label">Auto-Loop Fixer</span>
+        <input type="checkbox" id="loopToggle">
+    </div>
+
     <div id="statusMsg">Ready</div>
     <script src="popup.js"></script>
 </body>
