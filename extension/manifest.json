@@ -7,6 +7,10 @@
   "background": {
     "service_worker": "background.js"
   },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Sync to Local"
+  },
   "content_scripts": [
     {
       "matches": ["https://gemini.google.com/*"],
