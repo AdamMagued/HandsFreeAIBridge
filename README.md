@@ -56,3 +56,7 @@ This tool allows a web page to execute shell commands and overwrite files on you
 If you want the floating "Sync" button:
 ```bash
 python overlay.py
+
+```
+## License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
